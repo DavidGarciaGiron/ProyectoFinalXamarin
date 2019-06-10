@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Create Nuevo Gasto"
+             NavigationPage.HasNavigationBar="false"
+             xmlns:viewModels="clr-namespace:ProyectoFinalXamarin.ViewModels"
+             x:Class="ProyectoFinalXamarin.Views.AddGastoPage">
+    <ContentPage.BindingContext>
+        <viewModels:AddGastoViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Image Source="https://i.pinimg.com/564x/ff/0b/73/ff0b7332c013ed44a96583f98767d9c4.jpg"
+                   Aspect="AspectFill"/>
+        <BoxView Color="#030E1B" Opacity="0.6"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout VerticalOptions="Center"
+                         Spacing="20"
+                         Padding="20">
+                <Label Text="Crear Nuevo Gasto" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="30"
+                       Margin="0,30,0,10"/>
+
+                <Entry Text="{Binding SelectedGasto.Nombre}" FontSize="24" Placeholder="Nombre" PlaceholderColor="White" TextColor="White"/>
+                <Entry Text="{Binding SelectedGasto.Apellidos}" FontSize="24" Placeholder="Apellidos" PlaceholderColor="White" TextColor="White"/>
+                <Entry Text="{Binding SelectedGasto.TipoGasto}" FontSize="24" Placeholder="Tipo de Gasto" PlaceholderColor="White" TextColor="White"/>
+                <Entry Text="{Binding SelectedGasto.Monto}" FontSize="24" Placeholder="Monto" PlaceholderColor="White" TextColor="White"/>
+
+                <Button Text="Guardar" 
+                        BackgroundColor="White" 
+                        BorderRadius="20" 
+                        TextColor="Black" 
+                        Command="{Binding SendGastoCommand}" />
+
+            </StackLayout>
+        </Grid>
+    </Grid>
+
+</ContentPage>
+  

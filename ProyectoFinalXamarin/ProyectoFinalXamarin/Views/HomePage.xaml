@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="false"
+             x:Class="ProyectoFinalXamarin.Views.HomePage">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="https://i.pinimg.com/564x/ff/0b/73/ff0b7332c013ed44a96583f98767d9c4.jpg"
+                   Aspect="AspectFill"/>
+            <BoxView Color="#030E1B" Opacity="0.6"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <StackLayout>
+                    <Label Text="Menú de Operaciones" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"
+                       FontSize="30"
+                       Margin="0,30,0,10"/>
+                    <Image Grid.Row="0" Source="https://i0.wp.com/www.doctorcifra.com/media/categorizar-ingresos-gastos.png?ssl=1" 
+                       WidthRequest="200" HeightRequest="200" 
+                       Margin="0,10,0,15"/>
+                    <Button Text="Registrar Nuevo Gasto" 
+                        BackgroundColor="White" 
+                        BorderRadius="20" 
+                        TextColor="Black" 
+                        Clicked="Button_Clicked"/>
+                    <Button Text="Ver Listado de Registró" 
+                        BackgroundColor="White" 
+                        BorderRadius="20" 
+                        TextColor="Black" 
+                        Clicked="Button_Get_Clicked"/>
+                    <Button Text="Editar Gasto" 
+                        BackgroundColor="White" 
+                        BorderRadius="20" 
+                        TextColor="Black" 
+                        Clicked="Button_Edit_Clicked"/>
+                    <Button Text="Eliminar Gasto" 
+                        BackgroundColor="White" 
+                        BorderRadius="20" 
+                        TextColor="Black" 
+                        Clicked="Button_Delete_Clicked"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
